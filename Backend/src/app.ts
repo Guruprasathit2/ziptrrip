@@ -11,13 +11,24 @@ app.use(cors());
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
-DbConnection.initialize().then(async () => {
-    console.log('Database connected successfully');
-}).catch((err: any) => {
-    console.log('Error: ', err);
-});
 app.use("/api", route);
+DbConnection.initialize()
+    .then(() => {
 
-app.listen(port, () => {
-    console.log('Server running in', port, 'port.');
-});
+        console.log('Database connected successfully');
+
+        app.listen(port, () => {
+            console.log(
+                `Server running in ${port} port.`
+            );
+        });
+
+    })
+    .catch((err: any) => {
+
+        console.error(
+            'Database connection error:',
+            err
+        );
+
+    });

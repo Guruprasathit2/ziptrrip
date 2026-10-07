@@ -68,6 +68,8 @@ export class ToDoService {
                     query.orWhere(item.name + ' = ' + item.value);
                 } else if (item.op === 'IN' && item.sign === undefined) {
                     query.andWhere(item.name + ' IN (' + item.value + ')');
+                } else if (item.op === 'BETWEEN' && item.sign === undefined) {
+                    query.andWhere(item.name + ' between ' + item.value1 + ' and ' + item.value2);
                 }
             });
         }

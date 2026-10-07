@@ -56,8 +56,9 @@ export class ToDoController {
             whereConditions.push(
                 {
                     name: 'ToDo.createdDate',
-                    sign: 'BETWEEN',
-                    value: [startDate, endDate]
+                    op: 'BETWEEN',
+                    value1: `'${startDate}'`,
+                    value2: `'${endDate}'`
                 }
             );
         }
@@ -75,6 +76,7 @@ export class ToDoController {
             name: 'ToDo.id',
             order: 'DESC'
         }];
+        console.log (whereConditions);
         const todos = await ToDoService.listByQueryBuilder(+limit || 10, +offset || 0, [], whereConditions, searchConditions, [], [], sort, false, false);
         const todosCount = await ToDoService.listByQueryBuilder(0, 0, [], whereConditions, searchConditions, [], [], [], true, false);
         return response.status(200).send({
