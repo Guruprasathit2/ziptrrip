@@ -225,6 +225,7 @@ function TodoList() {
                     <input
                         type="date"
                         value={startDate}
+                        max={new Date().toISOString().split('T')[0]}
                         onChange={(e) =>
                             setStartDate(e.target.value)
                         }
@@ -241,6 +242,7 @@ function TodoList() {
                     <input
                         type="date"
                         value={endDate}
+                        max={new Date().toISOString().split('T')[0]}
                         onChange={(e) =>
                             setEndDate(e.target.value)
                         }
@@ -446,7 +448,6 @@ function TodoList() {
 
             </div>
 
-            {/* Pagination */}
 
             {totalCount > 0 && (
 
