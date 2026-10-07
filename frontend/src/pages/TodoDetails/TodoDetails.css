@@ -1,0 +1,144 @@
+.todo-details-container {
+    width: 92%;
+    max-width: 750px;
+
+    margin: 40px auto;
+}
+
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 24px;
+}
+
+.details-header h1 {
+    margin: 0;
+
+    font-size: 26px;
+    font-weight: 600;
+
+    color: #1f2937;
+}
+
+.details-header button {
+    padding: 9px 16px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.details-header button:hover {
+    background: #f3f4f6;
+}
+
+.todo-form {
+    background: #ffffff;
+
+    padding: 30px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #374151;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #1f2937;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+.save-button {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.save-button:hover {
+    background: #1d4ed8;
+}
+
+.save-button:active {
+    transform: translateY(1px);
+}
+
+.loading {
+    padding: 60px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
